@@ -49,6 +49,10 @@
     header.hero{page-break-after:avoid}
     .card, .section{break-inside:avoid}
     a{text-decoration:none; color:#000}
+	a[href] {
+    color: #0ea5e9;
+    text-decoration: underline;
+  }
   }
   hr.divider {
      border: none;
@@ -56,6 +60,45 @@
      margin: 28px 0;
      opacity: 0.8;
   }
+  
+  .stack-group {
+	  margin-bottom: 16px;
+	}
+
+	.stack-group h4 {
+	  margin: 6px 0;
+	  font-size: 15px;
+	  color: var(--muted);
+	  font-weight: 600;
+	}
+
+	.stack-row {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 6px;
+	}
+
+	.chip {
+	  display: inline-block;
+	  padding: 4px 10px;
+	  border: 1px solid var(--line);
+	  border-radius: 999px;
+	  font-size: 13px;
+	  background: #fff;
+	  color: #111827;
+	}
+	.card a {
+	  color: var(--accent);
+	  text-decoration: none;
+	}
+	.card a:hover {
+	  text-decoration: underline;
+	}
+
+	.card p a::before {
+	  content: "🔗 ";
+	  font-size: 14px;
+	}
 </style>
 </head>
 <body>
@@ -66,13 +109,38 @@
     </header>
 	
 	<section class="card">
-		<h2>👋 소개</h2>
-		<p>안녕하세요.<br>
-		저는 <strong>클라이언트·백엔드 개발</strong>과 <strong>블록체인 게임 서비스 기획/운영</strong>을 모두 경험한 <strong>박범준</strong>입니다.<br>
+	  <h2>👋 소개</h2>
+	  <p>
+		안녕하세요.<br>
+		저는 <strong>클라이언트·백엔드 개발</strong>과 <strong>블록체인 게임 서비스 기획·운영</strong>을 모두 경험한 개발자 <strong>박범준</strong>입니다.<br>
 		스마일게이트 STOVE에서 <strong>PC STOVE 런처와 패치 시스템</strong>을 개발하며 기술적 기반을 다졌고,<br>
-		LumiWave (피디엑스)에서는 <strong>게임 플랫폼 백엔드 서버 개발</strong>, <strong>온체인 게임(블록체인) 개발·서비스</strong>, <strong>NFT 콘텐츠 총괄</strong>을 맡아<br><strong>기획 → 개발 → 출시 → 운영 → 커뮤니티</strong> 전 과정을 주도했습니다.</p>
-		<p class="muted">기술과 서비스가 만나는 지점에서, 안정적이고 지속 가능한 게임 플랫폼과 콘텐츠를 만들어왔습니다.</p>
+		LumiWave(피디엑스)에서는 <strong>게임 플랫폼 백엔드 서버 개발</strong>, <strong>온체인 게임(블록체인) 서비스</strong>, <strong>NFT 콘텐츠 총괄</strong>을 맡아<br>
+		<strong>기획 → 개발 → 출시 → 운영 → 커뮤니티</strong> 전 과정을 주도했습니다.
+	  </p>
+
+	  <p>
+		또한 회사 대표로 여러 <strong>게임·블록체인 컨퍼런스</strong>에 연사로 참여하여<br>
+		플랫폼 아키텍처 설계와 Web3 게임 운영 경험을 주제로 발표했습니다.<br>
+		📺 발표 영상: 
+		<a href="https://youtu.be/269GzscXlrw?t=114" target="_blank" rel="noopener noreferrer">
+		  YouTube 바로가기
+		</a>
+	  </p>
+
+	  <p>
+		📰 관련 기사: 
+		<a href="https://zdnet.co.kr/view/?no=20240612163955" target="_blank" rel="noopener noreferrer">
+		  [게임조선] LumiWave, 블록체인 게임 플랫폼 'INNO' 컨퍼런스 발표
+		</a>
+	  </p>
+
+	  <p class="muted">
+		기술과 서비스가 만나는 지점에서,<br>
+		안정적이고 지속 가능한 게임 플랫폼과 콘텐츠를 만들어왔습니다.
+	  </p>
 	</section>
+
+
     
     <aside class="sidebar">
       <section class="section">
@@ -84,23 +152,57 @@
         <div class="chip">조직 리더십</div>
       </section>
       <section class="section">
-        <h2>기술 스택</h2>
-        <div>
-          <div class="chip">C++</div>
-          <div class="chip">Qt Framework</div>
+	  <h2>기술 스택</h2>
+	  
+	  <div class="stack-group">
+		<h4 class="muted">언어</h4>
+		<div class="stack-row">
+		  <div class="chip">C++</div>
+		  <div class="chip">C#</div>
 		  <div class="chip">Python</div>
-          <div class="chip">C#</div>
-          <div class="chip">Unity · WebGL</div>
-          <div class="chip">Golang</div>
-          <div class="chip">Echo Framework</div>
-          <div class="chip">Redis</div>
-          <div class="chip">Elasticsearch</div>
-          <div class="chip">MSSQL</div>
-          <div class="chip">AWS · Docker</div>
-          <div class="chip">Jenkins</div>
-          <div class="chip">Sui · LINE Blockchain(Kaia)</div>
-        </div>
-      </section>
+		  <div class="chip">Golang</div>
+		</div>
+	  </div>
+
+	  <div class="stack-group">
+		<h4 class="muted">프레임워크 / 라이브러리</h4>
+		<div class="stack-row">
+		  <div class="chip">Qt Framework</div>
+		  <div class="chip">Echo Framework</div>
+		  <div class="chip">Unity · WebGL</div>
+		</div>
+	  </div>
+
+	  <div class="stack-group">
+		<h4 class="muted">데이터베이스 / 캐시</h4>
+		<div class="stack-row">
+		  <div class="chip">Redis</div>
+		  <div class="chip">Elasticsearch</div>
+		  <div class="chip">MSSQL</div>
+		</div>
+	  </div>
+
+	  <div class="stack-group">
+		<h4 class="muted">인프라 / DevOps</h4>
+		<div class="stack-row">
+		  <div class="chip">AWS</div>
+		  <div class="chip">Docker</div>
+		  <div class="chip">Jenkins</div>
+		  <div class="chip">CI/CD</div>
+		</div>
+	  </div>
+
+	  <div class="stack-group">
+		<h4 class="muted">블록체인 / Web3</h4>
+		<div class="stack-row">
+		  <div class="chip">Sui</div>
+		  <div class="chip">LINE Blockchain (Kaia)</div>
+		  <div class="chip">Move</div>
+		  <div class="chip">WalletConnect</div>
+		</div>
+	  </div>
+	</section>
+
     </aside>
 	
 	<hr class="divider">
@@ -114,7 +216,7 @@
     <div class="section">
       <h3>🎮 스마일게이트 STOVE | PC클라이언트개발팀</h3>
       <div class="meta">
-        <span class="pill">기간: 2017.07 – 2021.10</span>
+        <span class="pill">기간: 2017.07 – 2021.10 (4년 3개월)</span>
         <span class="pill">역할: PC 런처 및 시스템 개발 / 대규모 유저 트래픽 대응 아키텍처 설계 / 서비스 개선</span>
       </div>
       <h4 class="muted" style="margin-top:12px;">주요 프로젝트 및 성과</h4>
@@ -147,7 +249,7 @@
             <li><strong>AWS S3 + CDN</strong> 기반 분산 배포로 속도 및 안정성 개선</li>
           </ul>
         </li>
-        <li><strong>STOVE 인디 Uploader 개발</strong>
+        <li><strong>STOVE 입점 시스템 개발</strong>
           <ul class="sublist">
             <li>인디 게임 <strong>빌드 업로드 및 패치 기능</strong> 개발</li>
             <li><strong>멀티파트 업로드</strong> 기능 구현으로 대용량 빌드 파일 업로드 안정성 확보</li>
@@ -162,14 +264,15 @@
     <div class="section">
 	  <h3>🚀 LumiWave (피디엑스) | 콘텐츠파트장</h3>
 	  <div class="meta">
-		<span class="pill">기간: 2021.10 – 2025.10</span>
+		<span class="pill">기간: 2021.10 – 2025.10 (4년)</span>
 		<span class="pill">역할: 블록체인 게임 플랫폼 및 콘텐츠 개발 총괄 / 서버 아키텍처 설계 / 팀 리딩 / 서비스 운영</span>
 	  </div>
 
 	  <h4 class="muted" style="margin-top:12px;">주요 프로젝트 및 성과</h4>
 	  <ul>
-		<li>
+		<li class="project">
 		  <strong>블록체인 게임 플랫폼 ‘INNO’ 개발</strong>
+		  <a href="https://lumiwavelab.com/" target="_blank" rel="noopener noreferrer" class="plink">🔗 플랫폼 링크</a>
 		  <ul class="sublist">
 			<li>
 			  <strong>INNO 플랫폼 백엔드 인증 및 로그인 서버 <code>inno-auth</code> 개발</strong>
@@ -225,29 +328,32 @@
 		  </ul>
 		</li>
 
-		<li>
-		  <strong>Unity 온체인 게임 ‘브릭팝(Brick Pop)’ 개발</strong>
+		<li class="project">
+		  <strong>SAMURAI SHODOWN: RPS — 게임 클라이언트 개발 &amp; LINE dApp 스토어 런칭</strong>
+		  <a href="https://www.dappportal.io/dapps/N67b31a08bd857a6b255cf1ff" target="_blank" rel="noopener noreferrer" class="plink">🔗 게임 링크</a>
 		  <ul class="sublist">
-			<li>Sui 블록체인 연동 퍼즐, 온체인 데이터 실시간 반영 구조 설계</li>
-			<li>Unity WebGL 빌드 최적화 및 반응형 스케일링으로 브라우저/해상도 일관 UX</li>
-			<li>Web3 SDK 트랜잭션 처리 및 자산 관리, ECS/Addressable 적용으로 용량 25% 절감</li>
+			<li>Unity WebGL 클라이언트 총괄, LINE Blockchain SDK &amp; WalletConnect 인증 연동</li>
+			<li>렌더링/해상도 최적화로 다양한 디바이스 대응, 론칭 직후 DAU 5천+, 로딩 50% 감소</li>
 		  </ul>
 		</li>
 
-		<li>
-		  <strong>SAMURAI SHODOWN: RPS — 클라이언트 &amp; LINE dApp 스토어 런칭</strong>
-		  <ul class="sublist">
-			<li>Unity WebGL 클라이언트 총괄, LINE Blockchain SDK &amp; WalletConnect 인증</li>
-			<li>렌더링/해상도 최적화로 다양한 디바이스 대응, 론칭 직후 DAU 1만+, 로딩 50% 감소</li>
-		  </ul>
-		</li>
-
-		<li>
+		<li class="project">
 		  <strong>SAMURAI SHODOWN R — 글로벌 출시 총괄</strong>
+		  <a href="https://inno.lumiwavelab.com/Games?game=SAMURAI%20SHODOWN%3A%20R" target="_blank" rel="noopener noreferrer" class="plink">🔗 게임 링크</a>
 		  <ul class="sublist">
 			<li>INNO 연동 및 글로벌 서비스 대응 구조 설계</li>
 			<li>App Store / Google Play / Huawei AppGallery / ONE Store 동시 론칭</li>
 			<li>출시 3개월 내 누적 다운로드 20만+</li>
+		  </ul>
+		</li>
+		
+		<li class="project">
+		  <strong>Unity 온체인 게임 ‘브릭팝(Brick Pop)’ 개발</strong>
+		  <a href="https://inno.lumiwavelab.com/Games?game=BRICKPOP" target="_blank" rel="noopener noreferrer" class="plink">🔗 게임 링크</a>
+		  <ul class="sublist">
+			<li>Sui 블록체인 연동 퍼즐, 온체인 데이터 실시간 반영 구조 설계</li>
+			<li>Unity WebGL 빌드 최적화 및 반응형 스케일링으로 브라우저/해상도 일관 UX</li>
+			<li>Web3 SDK 트랜잭션 처리 및 자산 관리, ECS/Addressable 적용으로 용량 25% 절감</li>
 		  </ul>
 		</li>
 
